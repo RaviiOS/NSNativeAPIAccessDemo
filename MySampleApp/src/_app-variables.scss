@@ -13,11 +13,11 @@ $blue-50: rgba($blue-dark, 0.5) !default;
 $blue-20: rgba($blue-dark, 0.2) !default;
 $blue-10: rgba($blue-dark, 0.1) !default;
 
-$accent-dark: #3A53FF !default;
-$accent-light: #4781FE !default;
+$accent-dark: rgb(255, 153, 58) !default;
+$accent-light: rgb(254, 181, 71) !default;
 
-$success-dark: #06CE6A !default;
-$success-light: #00E676 !default;
+$success-dark: rgb(206, 153, 6) !default;
+$success-light: rgb(230, 157, 0) !default;
 
 $warning-dark: #f39c11 !default;
 $warning-light: #F2C112 !default;

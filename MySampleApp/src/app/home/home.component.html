@@ -12,10 +12,18 @@
     <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label class="action-bar-title" text="Home"></Label>
+    <Label class="action-bar-title" text="BLE Devices"></Label>
+
+      <ActionItem (tap)="onSearch()"
+      ios.systemIcon="12" ios.position="right"
+      text="delete" android.position="popup"></ActionItem>
+
 </ActionBar>
 
-<GridLayout class="page page-content">
-    <Label class="page-icon fa" text="&#xf015;"></Label>
-    <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+<ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group" iosEstimatedRowHeight="44" >
+        <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+            <GridLayout>
+                <Label [text]="item.name" class="list-group-item"></Label>
+            </GridLayout>
+        </ng-template>
+</ListView>
