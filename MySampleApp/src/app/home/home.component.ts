@@ -9,7 +9,9 @@ import { ItemEventData } from "tns-core-modules/ui/list-view";
 
 @Component({
     selector: "Home",
-    templateUrl: "./home.component.html"
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.scss"]
+    
 })
 export class HomeComponent implements OnInit {
     centralManager: CBCentralManager;
@@ -63,4 +65,5 @@ export class HomeComponent implements OnInit {
         console.log(`Index: ${args.index}; View: ${args.view} ; Item: ${this.items[args.index]}`);
     }
 
+    
 }

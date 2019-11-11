@@ -22,8 +22,11 @@
 
 <ListView [items]="items" (itemTap)="onItemTap($event)" class="list-group" iosEstimatedRowHeight="44" >
         <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
-            <GridLayout>
-                <Label [text]="item.name" class="list-group-item"></Label>
+            <GridLayout rows="30,20" columns="30,*,100">
+                <Label [text]="i" class="rssi-lable" row="0" col="0" rowspan="2"></Label>
+                <Label [text]="item.name" row="0" col="1"></Label>
+                <Label [text]="item.role" row="1" col="1"></Label>
+                <Button text="Connect"  class="my-button" (tap)="onTap($event)" row="0" col="2" rowspan="2"></Button>
             </GridLayout>
         </ng-template>
 </ListView>
